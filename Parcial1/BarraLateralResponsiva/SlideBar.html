@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>SlideBar Responsive</title>
+        <script defer src="https://kit.fontawesome.com/12d5610f89.js">            
+        </script>
+        <link rel = "stylesheet" href="style.css" >
+        <script>
+            function openSlideMenu(){
+              document.getElementById('menu').style.width = '250px';
+              document.getElementById('content').style.marginLeft = '250px';
+            }
+            function closeSlideMenu(){
+              document.getElementById('menu').style.width = '0';
+              document.getElementById('content').style.marginLeft = '0';
+            }
+          </script>
+    </head>
+
+    <body>
+        <div id="content">
+
+            <span class="slide">
+              <a href="#" onclick="openSlideMenu()">
+                <i class="fas fa-bars"></i>
+              </a>
+            </span>
+        
+            <div id="menu" class="nav">
+              <a href="#" class="close" onclick="closeSlideMenu()">
+                <i class="fas fa-times"></i>
+              </a>
+              <a id="opcion1" href="#opColores">Colores</a>
+              <a id="opcion2" href="#opCombinaciones">Combinaciones</a>
+              <a id="opcion3" href="#opCreatividad">Creatividad</a>
+              <a id="opcion4" href="#opArte">Arte</a>
+            </div>
+            <div class="content">
+                <label for="toggle"><h1>SideBar Responsive</h1></label>
+                <div id="opcion1" class="contentOption">Aqui es la opcion 1</div>
+                <div id="opcion2" class="contentOption">Aqui es la opcion 2</div>
+                <div id="opcion3" class="contentOption">Aqui es la opcion 3</div>
+                <div id="opcion4" class="contentOption">Aqui es la opcion 4</div>
+
+            </div>
+        
+            
+        
+          </div>
+        
+    </body>
+
+</html>
