@@ -14,12 +14,23 @@
               document.getElementById('menu').style.width = '0';
               document.getElementById('content').style.marginLeft = '0';
             }
+            function CambiarCaja(caja){
+              for (var i = 1; i <= 4; i++) {
+                document.getElementById('caja' + i).style.display = 'none';
+              }
+              document.getElementById(caja).style.display='block';
+            }
           </script>
     </head>
 
     <body>
-        <div id="content">
+        <main>
+          <section id="banner">
+            <img src="img/banner2.jpg">           
+          </section>
+        </main>
 
+        <div id="content">
             <span class="slide">
               <a href="#" onclick="openSlideMenu()">
                 <i class="fas fa-bars"></i>
@@ -30,21 +41,35 @@
               <a href="#" class="close" onclick="closeSlideMenu()">
                 <i class="fas fa-times"></i>
               </a>
-              <a id="opcion1" href="#opColores">Colores</a>
-              <a id="opcion2" href="#opCombinaciones">Combinaciones</a>
-              <a id="opcion3" href="#opCreatividad">Creatividad</a>
-              <a id="opcion4" href="#opArte">Arte</a>
+              <a id="opcion1" href="#opInicio" onclick="CambiarCaja('caja1')">Inicio</a>
+              <a id="opcion2" href="#opDanza" onclick="CambiarCaja('caja2')">Danza</a>
+              <a id="opcion3" href="#opCreatividad" onclick="CambiarCaja('caja3')">Creatividad</a>
+              <a id="opcion4" href="#opArte" onclick="CambiarCaja('caja4')">Arte</a>
             </div>
-            <div class="content">
-                <label for="toggle"><h1>SideBar Responsive</h1></label>
-                <div id="opcion1" class="contentOption">Aqui es la opcion 1</div>
-                <div id="opcion2" class="contentOption">Aqui es la opcion 2</div>
-                <div id="opcion3" class="contentOption">Aqui es la opcion 3</div>
-                <div id="opcion4" class="contentOption">Aqui es la opcion 4</div>
-
-            </div>
-        
-            
+            <section class="banner">
+              <div class="contenedor" id="caja1">
+                <h2>La belleza en el arte es agonia</h2>
+                <p>¿Por que es importante el arte?</p>
+              </div>
+            </section>      
+            <section class="banner">
+              <div class="contenedor" id="caja2">
+                <h2>Danza</h2>
+                <p>La danza contemporánea es una fusión de diferentes estilos cuya base se encuentra en el ballet clásico, pero libre de la disciplina de este estilo. Por el contrario, se caracteriza por una total libertad en los movimientos y en la expresión corporal. </p>
+              </div>
+            </section>  
+            <section class="banner">
+              <div class="contenedor" id="caja3">
+                <h2>Creatividad</h2>
+                <p>Es un método de trabajo corporal en el que a través de una danza libre, espontánea, sin reglas preestablecidas, se estimulan las potencialidades de expresión y movimiento que todos tenemos, mediante un proceso creativo que proporciona un bienestar físico, psíquico y afectivo.</p>
+              </div>
+            </section>  
+            <section class="banner">
+              <div class="contenedor" id="caja4">
+                <h2>Arte</h2>
+                <p>El ballet es un arte escénico que puede incluir danza, música de orquesta, coro, mímica, actuación, escenografía, vestuario y relatos fantásticos. Todo depende de quién sea su creador y de la época en que se haya creado.</p>
+              </div>
+            </section>  
         
           </div>
         
