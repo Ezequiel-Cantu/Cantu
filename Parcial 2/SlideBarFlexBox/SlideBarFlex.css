@@ -50,11 +50,19 @@ body {
 	left:0;
 	padding: 10px;
 }
+
+/*Contenedor*/
 #content {
 	padding: 20px;
 	transition: margin-left 0.7s;
 	overflow: hidden;
 	width: 100%;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    background-color: grey;
+    
 }
 .contentOption {display: none;}
 
@@ -89,7 +97,11 @@ section {
 	transform: translateX(-50%) translateY(-50%);
 	color: #fff;
 	align-content: center;
-	display: none;
+	/*Contenedor hijo*/
+    display: flex;
+    width: 50vw;
+    height: 50vh;
+    flex-direction: column;
 }
 .banner h2 {
 	font-size: 68px;
