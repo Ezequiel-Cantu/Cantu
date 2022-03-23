@@ -1,0 +1,31 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family:'Courier New', Courier, monospace;
+}
+
+.contendedor{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: row;
+    background-color: rgb(112, 111, 111);
+}
+.contendedor2{
+    display: inline flex;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+    align-self: auto;
+    background-color: whitesmoke;
+}
+
+.caja{
+    width: 150px;
+    height: 150px;
+    border: 1px solid pink;
+    margin: auto;
+    background-color: rosybrown;
+    display: flex;
+}
