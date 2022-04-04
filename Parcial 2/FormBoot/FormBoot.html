@@ -15,16 +15,7 @@
       <button name="btnMenu" class="navbar-toggler" data-toggle="collapse" data-target="#navbarMenu">
           <span class="navbar-toggler-icon"> </span>
       </button>
-        <div class="collapse navbar-collapse" id="navbarMenu">
-        <ul class="navbar-nav">
-            <li class="nav-item"> 
-                <a href="#" class="nav-link">Clientes</a>
-            </li>
-            <li class="nav-item"> 
-                <a href="#" class="nav-link">Productos</a>
-            </li>
-        </ul>
-     </div>
+        
     </nav>
     
     <form action="" class="main-form needs-validation" novalidate>
@@ -45,7 +36,32 @@
                 </div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-sm-3 col-md-4 col-lg-5 col-xl-6">
+                <div class="form-group">
+                    <br>
+                    <label for="Edad">Edad</label>
+                    <input type="text" name="Edad" id="Edad" class="form-control">
+                </div>
+            </div>
+            <div class="col-sm-3 col-md-4 col-lg-5 col-xl-6">
+                <div class="form-group">
+                    <br>
+                    <label for="Ocupacion">Ocupacion</label>
+                    <input type="text" name="Ocupacion" id="Ocupacion" class="form-control">
+                </div>
+            </div>
+            
+        </div>
         <div class="form-group">
+            <div class="row">
+                <div class="col-sm-6 col-md-8 col-lg-10 col-xl-12">
+                    <label for="Telefono">Telefono</label>
+                    <input type="text" name="telefono" id="telefono" class="form-control" required >
+                    <div class="invalid-feedback">Prueba con otro numero de telefono [x]</div>
+                    <div class="valid-feedback">¡Suena bien!</div>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-sm-6 col-md-8 col-lg-10 col-xl-12">
                     <label for="Username">Usuario</label>
@@ -64,10 +80,10 @@
         <div class="form-group">
             <div class="row">
                 <div class="col-sm-6 col-md-8 col-lg-10 col-xl-12">
-                    <label for="gender" id="gender"> Gender</label>
+                    <label for="gender" id="gender"> Genero</label>
                     <select name="gender" id="gender" class="form-control" required>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
+                        <option value="male">Masculino</option>
+                        <option value="female">Femenino</option>
                 </div>        
             </div>
         </div>
