@@ -22,3 +22,10 @@ En donde, al presionar uno de los dos elementos se llevan a cabo secuencialmente
 ## Fases del flujo de eventos
 Las tres fases de flujo de eventos se ilustran en el siguiente diagrama:
 ![Imagen de Capturing](Diagrama.png)
+
+## Proceso de captura
+En primera instancia, para capturar un evento en Javasript se hace de la siguiente manera:
+```
+el.addEventListener('click', listener, true)
+```
+Con el parametro *true* se acepta la captura del evento. Ahora bien, en el caso mostrado al principio, nos percatamos que tiene el parametro *false*, por lo tanto no captura, para cambiarlo simplemente tecleamos el parametro *true*.
