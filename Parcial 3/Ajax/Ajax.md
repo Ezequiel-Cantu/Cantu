@@ -1,5 +1,5 @@
 **INSTITUTO TECNOLÓGICO DE NUEVO LAREDO**  
-6°A | *Ing. Sistemas Computacionales*  
+6°B | *Ing. Sistemas Computacionales*  
 Programación Web | Ing. Gerardo Pineda Zapata  
 Ezequiel Cantú de la Rosa, **19100155**  
 01/05/2022</br>
