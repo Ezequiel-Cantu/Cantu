@@ -23,7 +23,7 @@ $('#AjaxPromise').click(function(){
             if (solicitud.readyState == 4 && solicitud.status == 200) {
                 resolve(solicitud.responseText);
             }};
-            solicitud.open("GET", "PracticaAjax.php", true);
+            solicitud.open("GET", "Registrar.php", true);
             solicitud.send();
         });
         Promesa.then(function(value) {document.getElementById("Fecha").innerHTML = value;});

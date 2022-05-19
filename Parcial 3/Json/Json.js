@@ -1,5 +1,12 @@
 $(document).ready(function () {
-    $('#btnSubmit').click(function () {
+    $('#btnJSON').click(function () {
+        
+    });
+});
+
+function AjaxFunction() {
+    var AjaxRequest;
+        AjaxRequest = new XMLHttpRequest();
         $.post('Registrar.php', {}, function (data) {
 
             console.log(data);
@@ -13,5 +20,10 @@ $(document).ready(function () {
             $('#gender').val(data.inputGenero);
 
         }, 'json');
-    });
-});
+        AjaxRequest.onreadystatechange = function(){
+            var inputNombre, inputAp_Pat, inputContrasena, inputEdad, inputGenero, inputOcupacion, inputTelefono, inputUsuario;
+            
+        };
+        AjaxRequest.open("GET","Registrar.php", true);
+        AjaxRequest.send();
+}
