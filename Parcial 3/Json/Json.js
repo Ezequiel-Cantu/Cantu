@@ -1,13 +1,7 @@
-$(document).ready(function () {
-    $('#btnJSON').click(function () {
-        
-    });
-});
+$(document).ready(function() {
 
-function AjaxFunction() {
-    var AjaxRequest;
-        AjaxRequest = new XMLHttpRequest();
-        $.post('Registrar.php', {}, function (data) {
+    $('#btnJSON').click(function() {
+        $.post('Registrar.php',{},function(data){
 
             console.log(data);
             $('#Nombre').val(data.inputNombre);
@@ -18,12 +12,6 @@ function AjaxFunction() {
             $('#username').val(data.inputUsuario);
             $('#password').val(data.inputContrasena);
             $('#gender').val(data.inputGenero);
-
-        }, 'json');
-        AjaxRequest.onreadystatechange = function(){
-            var inputNombre, inputAp_Pat, inputContrasena, inputEdad, inputGenero, inputOcupacion, inputTelefono, inputUsuario;
-            
-        };
-        AjaxRequest.open("GET","Registrar.php", true);
-        AjaxRequest.send();
-}
+          },'json');
+    })
+});

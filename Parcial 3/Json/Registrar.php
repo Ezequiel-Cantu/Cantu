@@ -1,5 +1,4 @@
 <?php
-
 $registro['inputNombre']  = 'Ezequiel';
 $registro['inputAp_Pat'] = 'Cantu';
 $registro['inputEdad'] = '21';
