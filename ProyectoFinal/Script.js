@@ -36,7 +36,7 @@ $(document).ready(function () {
     $('#btnConsBD').click(function() {
         let parid=prompt("Teclee el ID a consultar");
 
-        $.post('getRegistroDB.php',{par1:parid},function(data){
+        $.post('getRegistroBD.php',{par1:parid},function(data){
           refrescar(data);
           },'json');
     });
