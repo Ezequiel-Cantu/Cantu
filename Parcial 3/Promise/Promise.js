@@ -14,17 +14,46 @@ $(document).ready(function () {
 
         }, 'json');
     });
-});
 
-$('#AjaxPromise').click(function(){
-    let Promesa = new Promise (function(resolve,reject){
-        var solicitud = new XMLHttpRequest();
-        solicitud.onreadystatechange=function(){
-            if (solicitud.readyState == 4 && solicitud.status == 200) {
-                resolve(solicitud.responseText);
-            }};
-            solicitud.open("GET", "Registrar.php", true);
+   
+         
+    $('#btnProm').click(function()
+    {
+        let promesa = new Promise(function(resolve,reject) {
+            var solicitud = new XMLHttpRequest();
+            solicitud.onreadystatechange = function(){
+                if(solicitud.readyState == 4 && solicitud.status == 200){
+                    resolve(solicitud.response);
+                }
+            }
+            solicitud.open("GET","ArchivoPromesa.txt",true);
             solicitud.send();
         });
-        Promesa.then(function(value) {document.getElementById("Fecha").innerHTML = value;});
+
+        promesa.then(function(value) {document.getElementById("divHeader").innerHTML = value;});
+    });
 });
+window.onload = function() {
+
+    document.getElementById("btnAjax").addEventListener("click",pedirHeader);
+    document.getElementById("btnAjaxReset").addEventListener("click",reiniciarHeader);
+    
+    function pedirHeader() {
+    
+    var solicitud = new XMLHttpRequest();          
+    solicitud.onreadystatechange = function() {  
+
+        if (solicitud.readyState == 4 && solicitud.status == 200) {                
+            document.getElementById("divHeader").innerHTML = solicitud.responseText; 
+    }};
+    
+    solicitud.open("GET", "Archivo.txt", true);
+    solicitud.send();
+    
+     }
+    
+    function reiniciarHeader() {
+        document.getElementById("divHeader").innerHTML = "<h1 class=\"h3 mb-3 font-weight-normal\">Registro del usuario</h1>"; 
+    }
+    
+}
