@@ -1,0 +1,22 @@
+.main-form{
+    width: 1000px;
+    margin: auto;
+}
+
+#btnSubmit
+{
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    font-size: 18px;
+}
+
+label{
+    display: block;
+}
+
+#image
+{
+    align-content: center;
+}
+
