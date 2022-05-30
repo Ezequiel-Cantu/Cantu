@@ -42,14 +42,14 @@ $(document).ready(function () {
     });
     function refrescar(objeto) {
         console.log(objeto);
-        $('#Nombre').val(objeto.inputNombre);
-        $('#Apellido').val(objeto.inputAp_Pat);
-        $('#Edad').val(objeto.inputEdad);
-        $('#Ocupacion').val(objeto.inputOcupacion);
-        $('#telefono').val(objeto.inputTelefono);
-        $('#username').val(objeto.inputUsuario);
-        $('#password').val(objeto.inputContrasena);
-        $('#gender').val(objeto.inputGenero);
+        $('#Nombre').val(objeto.Nombre);
+        $('#Apellido').val(objeto.ApPat);
+        $('#Edad').val(objeto.Edad);
+        $('#Ocupacion').val(objeto.Ocupacion);
+        $('#telefono').val(objeto.Telefono);
+        $('#username').val(objeto.Usuario);
+        $('#password').val(objeto.Contrasena);
+        $('#gender').val(objeto.Genero);
     }
 });
 
