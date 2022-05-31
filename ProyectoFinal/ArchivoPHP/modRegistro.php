@@ -1,5 +1,5 @@
 <?php
-include('conexion.php');
+include('ArchivoPHP/conexion.php');
 
 $nom = $_POST['par2'];
 $Ape = $_POST['par3'];
@@ -11,7 +11,7 @@ $Pass = $_POST['par8'];
 $gener = $_POST['par9'];
 
 try{
-    $consultaSql = "update Usuario set Nombre ='$nom', ApPat = '$Ape', Edad = '$Edad', Ocupacion = '$Ocupacion', Telefono = '$Telefono', Usuario = '$Usernam', Contrasena = '$Pass', Genero = '$gener'";
+    $consultaSql = "update usuario set Nombre ='$nom', ApPat = '$Ape', Edad = '$Edad', Ocupacion = '$Ocupacion', Usuario = '$Usernam', Telefono = '$Telefono',  Genero = '$gener', Contrasena = '$Pass' where idUsuario = '$idUsuario'";
     $consulta = $con -> prepare($consultaSql);
     $consulta -> execute();
     $consulta -> closeCursor();
