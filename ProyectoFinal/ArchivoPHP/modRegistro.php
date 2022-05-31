@@ -1,5 +1,5 @@
 <?php
-include('ArchivoPHP/conexion.php');
+include('conexion.php');
 
 $nom = $_POST['par2'];
 $Ape = $_POST['par3'];

@@ -1,5 +1,5 @@
 <?php
-include('ArchivoPHP/conexion.php');
+include('conexion.php');
 
 try {
     $consultaSql = "delete from usuario where idUsuario=".$idUsuario;
