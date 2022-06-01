@@ -107,6 +107,7 @@ $(document).ready(function () {
         $('#telefono').val("");
         $('#username').val("");
         $('#password').val("");
+        $('#gender').val("");
     }
 });
 
