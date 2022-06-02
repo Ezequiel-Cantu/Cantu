@@ -1,4 +1,32 @@
 $(document).ready(function () {
+    
+    $('#btnAgregar').click(function() {
+        try {
+            var nom = document.getElementById("Nombre").value;
+            var Ape = document.getElementById("Apellido").value;
+            var Edad = document.getElementById("Edad").value;
+            var Ocupacion = document.getElementById("Ocupacion").value;
+            var Telefono = document.getElementById("telefono").value;
+            var Usernam = document.getElementById("username").value;
+            var Pass = document.getElementById("password").value;
+            var gener = document.getElementById("gender").value;
+    
+              if(nom == "" || Ape == "" || Edad == "" || Ocupacion == "" || Telefono == "" || Usernam == "" || Pass == "" || gener == "")
+              {
+                    swal("Error", "Favor de no dejar los campos vacíos", "error");
+              }
+              else{
+                    $.post('ArchivoPHP/AgregarRegistro.php',{par2:nom, par3:Ape, par4:Edad, par5:Ocupacion, par6:Telefono, par7:Usernam, par8:Pass, par9:gener},
+                    function(data){  
+                    },'json');
+                    swal("Acción completada", "Se ha agregado correctamente", "success");  
+                    LimpiarFormulario();
+              } 
+        } catch (exception) {
+            swal("Error", "Ha ocurrido un error", "error");
+        }        
+  });
+    
     $('#btnModifBD'). click(function()
     {
         let Id = document.getElementById("ID").value;

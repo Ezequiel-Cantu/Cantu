@@ -21,7 +21,7 @@ $Ocupacion = $_POST['par5'];
 $Telefono = $_POST['par6'];
 $Usernam = $_POST['par7'];
 $Pass = $_POST['par8'];
-$gener = "Masculino";
+$gener = $_POST['par9'];
 
 try{
     $consultaSql = "insert into usuario (Nombre, ApPat, Edad, Ocupacion, Usuario, Telefono, Genero, Contrasena) values
